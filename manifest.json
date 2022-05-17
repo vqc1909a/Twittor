@@ -1,0 +1,84 @@
+{
+    "short_name": "Twittor",
+    "name": "Twittor para Hèroes",
+    "description":"Twittor es Jesús🔥!!!. Quisieras instalarlo?",
+    "icons": [
+        {
+            "src": "img/icons/icon-48x48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "img/icons/icon-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "img/icons/icon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "img/icons/icon-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "img/icons/icon-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "img/icons/icon-152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "img/icons/icon-168x168.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/icons/icon-384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "img/icons/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "lang": "es-PE",
+    "start_url": "index.html",
+    "background_color": "#3498db",
+    "theme-color": "#3498db",
+    "display": "standalone",
+    "scope": "/",
+    "orientation": "portrait",
+    "shortcuts": [  
+        {
+        "name": "¿Cómo está el tiempo hoy?",
+        "short_name": "Hoy día",
+        "description": "Ver información meteorológica para hoy",
+        "url": "hoy.html",
+        "icons": [{ "src": "img/icons/icon-today-192x192.png", "sizes": "192x192" }]
+        },
+        {
+        "name": "¿Cómo está el tiempo mañana?",
+        "short_name": "Mañana",
+        "description": "Ver información meteorológica para mañana",
+        "url": "manana.html",
+        "icons": [{ "src": "img/icons/icon-tomorrow-192x192.png", "sizes": "192x192" }]
+        }
+    ],
+    "related_applications": [{
+        "platform": "chrome_web_store",
+        "url": "https://c886-2001-1388-70e3-9fc1-ac23-63c1-6f5d-4e4.ngrok.io/"
+    }]
+}
