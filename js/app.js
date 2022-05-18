@@ -22,11 +22,11 @@ if (navigator.serviceWorker){
 // Inicializa deferredPrompt para su uso más tarde.
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    console.log(deferredPrompt);
-});
+// window.addEventListener('beforeinstallprompt', (e) => {
+//     e.preventDefault();
+//     deferredPrompt = e;
+//     console.log(deferredPrompt);
+// });
 
 // window.addEventListener("load", (e) => {
 //   console.log(e);
