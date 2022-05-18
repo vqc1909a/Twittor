@@ -9,6 +9,14 @@ if (navigator.serviceWorker){
     navigator.serviceWorker.register("sw.js"); 
 }
 
+//!Promoviendo la instalación del SW
+// Inicializa deferredPrompt para su uso más tarde.
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    console.log("Se peude instalar")
+});
+
 //!Aquí se encuentra toda la lógica de la aplicación
 // Referencias de jQuery
 var titulo      = $('#titulo');
