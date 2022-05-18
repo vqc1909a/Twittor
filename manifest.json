@@ -76,9 +76,5 @@
         "url": "manana.html",
         "icons": [{ "src": "img/icons/icon-tomorrow-192x192.png", "sizes": "192x192" }]
         }
-    ],
-    "related_applications": [{
-        "platform": "chrome_web_store",
-        "url": "https://c886-2001-1388-70e3-9fc1-ac23-63c1-6f5d-4e4.ngrok.io/"
-    }]
+    ]
 }
