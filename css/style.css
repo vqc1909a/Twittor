@@ -436,3 +436,12 @@ and (-webkit-device-pixel-ratio : 3) {
 .retweet div {
     color: white;
 }
+
+.button{
+  background-color: #3498db;
+  padding: 1rem;
+  color: white;
+  border-radius: 25px;
+  display: none;
+  cursor: pointer;
+}

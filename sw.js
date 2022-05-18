@@ -5,9 +5,9 @@
 //!Esto del importScript, es una mierda xq no me capta el error cuando esta dentro de un catch, pero si funciona
 importScripts("js/sw-utils.js");
 
-const STATIC_CACHE_NAME = "static-v1"
-const DYNAMIC_CACHE_NAME = "dynamic-v1"
-const INMUTABLE_CACHE_NAME = "inmutable-1"
+const STATIC_CACHE_NAME = "static-v1";
+const DYNAMIC_CACHE_NAME = "dynamic-v1";
+const INMUTABLE_CACHE_NAME = "inmutable-1";
 
 const APP_SHELL = [
     "/",
@@ -32,16 +32,13 @@ const APP_SHELL_INMUTABLE = [
 ];
 
 self.addEventListener("install", (e) => {
-
     const cacheStaticProm = caches.open(STATIC_CACHE_NAME).then(cache => {
-        return cache.addAll(APP_SHELL);
+        return cache.addAll(APP_SHELL)
     })
-
     const cacheInmutableProm = caches.open(INMUTABLE_CACHE_NAME).then(cache  => {
-        return cache.addAll(APP_SHELL_INMUTABLE);
+        return cache.addAll(APP_SHELL_INMUTABLE)
     })
-
-    e.waitUntil(Promise.all([cacheStaticProm, cacheInmutableProm]));
+    e.waitUntil(Promise.all([cacheStaticProm, cacheInmutableProm]))
 })
 
 self.addEventListener("activate", (e) => {
