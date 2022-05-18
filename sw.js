@@ -34,11 +34,11 @@ const APP_SHELL_INMUTABLE = [
 self.addEventListener("install", (e) => {
 
     const cacheStaticProm = caches.open(STATIC_CACHE_NAME).then(cache => {
-        return cache.addAll(APP_SHELL)
+        return cache.addAll(APP_SHELL);
     })
 
     const cacheInmutableProm = caches.open(INMUTABLE_CACHE_NAME).then(cache  => {
-        return cache.addAll(APP_SHELL_INMUTABLE)
+        return cache.addAll(APP_SHELL_INMUTABLE);
     })
 
     e.waitUntil(Promise.all([cacheStaticProm, cacheInmutableProm]));
@@ -50,7 +50,7 @@ self.addEventListener("activate", (e) => {
             if(key === STATIC_CACHE_NAME || key === DYNAMIC_CACHE_NAME || key === INMUTABLE_CACHE_NAME){
                 return
             }
-            return caches.delete(key)
+            return caches.delete(key);
         }))
     }) 
     e.waitUntil(prom)
@@ -74,7 +74,7 @@ self.addEventListener("fetch", e => {
                 }
             }
         }).catch(err => {
-            console.log(`Error de red: ${e.request.url}`)
+            console.log(`Error de red: ${e.request.url}`);
 
             let accept = e.request.headers.get("Accept")
             if(accept.includes("text/html")){

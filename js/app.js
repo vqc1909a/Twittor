@@ -13,12 +13,13 @@ if (navigator.serviceWorker){
 // Inicializa deferredPrompt para su uso más tarde.
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', function(e){
+window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
+    console.log(e);
     deferredPrompt = e;
 });
 
-window.addEventListener("load", function(e){
+window.addEventListener("load", (e) => {
   deferredPrompt.prompt();
   // Wait for the user to respond to the prompt
   deferredPrompt.userChoice
@@ -32,7 +33,7 @@ window.addEventListener("load", function(e){
     });
 })
 
-window.addEventListener('appinstalled', function(e){
+window.addEventListener('appinstalled', (e) => {
   app.logEvent('a2hs', 'installed');
 })
 
