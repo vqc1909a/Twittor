@@ -9,12 +9,12 @@ if (navigator.serviceWorker){
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
         .then(function(reg){
-            console.log("service worker registered")
+            console.log("service worker registered");
         }).catch(function(err) {
-            console.log(err)
+            console.log(err);
         });
     }else{
-        console.log("Could not find serviceWorker in navigator")
+        console.log("Could not find serviceWorker in navigator");
     }
 }
 
