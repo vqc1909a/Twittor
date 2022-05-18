@@ -48,7 +48,7 @@ self.addEventListener("activate", (e) => {
     const prom = caches.keys().then(listKeys => {
         return Promise.all(listKeys.map(key => {
             if(key === STATIC_CACHE_NAME || key === DYNAMIC_CACHE_NAME || key === INMUTABLE_CACHE_NAME){
-                return
+                return;
             }
             return caches.delete(key);
         }))
@@ -76,7 +76,7 @@ self.addEventListener("fetch", e => {
         }).catch(err => {
             console.log(`Error de red: ${e.request.url}`);
 
-            let accept = e.request.headers.get("Accept")
+            let accept = e.request.headers.get("Accept");
             if(accept.includes("text/html")){
                 return caches.match("pages/offline.html");
             }else if(accept.includes("image/")){
