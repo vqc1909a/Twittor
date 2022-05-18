@@ -13,9 +13,28 @@ if (navigator.serviceWorker){
 // Inicializa deferredPrompt para su uso más tarde.
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    console.log("Se peude instalar")
+window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
 });
+
+window.addEventListener("load", function(e){
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+})
+
+window.addEventListener('appinstalled', function(e){
+  app.logEvent('a2hs', 'installed');
+})
 
 //!Aquí se encuentra toda la lógica de la aplicación
 // Referencias de jQuery
