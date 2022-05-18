@@ -15,27 +15,29 @@ let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
-    console.log(e);
     deferredPrompt = e;
+    console.log(deferredPrompt);
 });
 
-window.addEventListener("load", (e) => {
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice
-    .then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      deferredPrompt = null;
-    });
-})
+// window.addEventListener("load", (e) => {
+//   console.log(e);
 
-window.addEventListener('appinstalled', (e) => {
-  app.logEvent('a2hs', 'installed');
-})
+//   deferredPrompt.prompt();
+//   // Wait for the user to respond to the prompt
+//   deferredPrompt.userChoice
+//     .then((choiceResult) => {
+//       if (choiceResult.outcome === 'accepted') {
+//         console.log('User accepted the A2HS prompt');
+//       } else {
+//         console.log('User dismissed the A2HS prompt');
+//       }
+//       deferredPrompt = null;
+//     });
+// })
+
+// window.addEventListener('appinstalled', (e) => {
+//   app.logEvent('a2hs', 'installed');
+// })
 
 //!Aquí se encuentra toda la lógica de la aplicación
 // Referencias de jQuery

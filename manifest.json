@@ -55,7 +55,7 @@
         }
     ],
     "lang": "es-PE",
-    "start_url": "index.html",
+    "start_url": "/",
     "background_color": "#3498db",
     "theme-color": "#3498db",
     "display": "standalone",
