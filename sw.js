@@ -48,12 +48,12 @@ self.addEventListener("activate", (e) => {
     const prom = caches.keys().then(listKeys => {
         return Promise.all(listKeys.map(key => {
             if(key === STATIC_CACHE_NAME || key === DYNAMIC_CACHE_NAME || key === INMUTABLE_CACHE_NAME){
-                return;
+                return
             }
-            return caches.delete(key);
+            return caches.delete(key)
         }))
     }) 
-    e.waitUntil(prom);
+    e.waitUntil(prom)
 })
 
 self.addEventListener("fetch", e => {
