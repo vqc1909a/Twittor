@@ -6,7 +6,16 @@ if (navigator.serviceWorker){
     // if (url.includes("localhost") | url.includes("127.0.0.1")){
     //     swLocation = "/sw.js";
     // }
-    navigator.serviceWorker.register("sw.js"); 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(function(reg){
+            console.log("service worker registered")
+        }).catch(function(err) {
+            console.log(err)
+        });
+    }else{
+        console.log("Could not find serviceWorker in navigator")
+    }
 }
 
 //!Promoviendo la instalación del SW
