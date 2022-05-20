@@ -57,7 +57,7 @@
     "lang": "es-PE",
     "start_url": "/",
     "background_color": "#3498db",
-    "theme-color": "#3498db",
+    "theme_color": "#3498db",
     "display": "standalone",
     "scope": "/",
     "orientation": "portrait",
