@@ -438,13 +438,13 @@ and (-webkit-device-pixel-ratio : 3) {
 }
 
 .button{
-  background-color: skyblue;
+  background-color: yellow;
   padding: 1rem;
   color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   display: none;
   cursor: pointer;
   margin-left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
