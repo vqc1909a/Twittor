@@ -444,4 +444,5 @@ and (-webkit-device-pixel-ratio : 3) {
   border-radius: 25px;
   display: none;
   cursor: pointer;
+  margin-left: auto;
 }

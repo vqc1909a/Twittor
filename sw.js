@@ -33,12 +33,14 @@ const APP_SHELL_INMUTABLE = [
 
 self.addEventListener("install", (e) => {
     const cacheStaticProm = caches.open(STATIC_CACHE_NAME).then(cache => {
-        return cache.addAll(APP_SHELL)
+        return cache.addAll(APP_SHELL);
     })
     const cacheInmutableProm = caches.open(INMUTABLE_CACHE_NAME).then(cache  => {
-        return cache.addAll(APP_SHELL_INMUTABLE)
+        return cache.addAll(APP_SHELL_INMUTABLE);
     })
-    e.waitUntil(Promise.all([cacheStaticProm, cacheInmutableProm]))
+    e.waitUntil((() => {
+        return Promise.all([cacheStaticProm, cacheInmutableProm]).then(self.skipWaiting());
+    })())
 })
 
 self.addEventListener("activate", (e) => {
