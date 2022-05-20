@@ -438,7 +438,7 @@ and (-webkit-device-pixel-ratio : 3) {
 }
 
 .button{
-  background-color: yellow;
+  background-color: skyblue;
   padding: 1rem;
   color: white;
   border-radius: 25px;
@@ -446,4 +446,5 @@ and (-webkit-device-pixel-ratio : 3) {
   cursor: pointer;
   margin-left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 2rem;
 }
