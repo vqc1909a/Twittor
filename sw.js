@@ -5,9 +5,9 @@
 //!Esto del importScript, es una mierda xq no me capta el error cuando esta dentro de un catch, pero si funciona
 importScripts("js/sw-utils.js");
 
-const STATIC_CACHE_NAME = "static-v3";
-const DYNAMIC_CACHE_NAME = "dynamic-v3";
-const INMUTABLE_CACHE_NAME = "inmutable-v3";
+const STATIC_CACHE_NAME = "static-v1";
+const DYNAMIC_CACHE_NAME = "dynamic-v1";
+const INMUTABLE_CACHE_NAME = "inmutable-v1";
 
 const APP_SHELL = [
     "/",
@@ -77,21 +77,21 @@ self.addEventListener("fetch", e => {
         
         if(res){
             //!Obtengo los datos del cache statico e inmutable y paralelamente hago una actualización de sus archivos
-            if(urlsCacheStatic.find(url => url === e.request.url)){
-                console.log(`Encontre una url estática ${e.request.url}`)
-                caches.open(STATIC_CACHE_NAME).then(cache => {
-                    fetch(e.request).then(newResp => {
-                        cache.put(e.request, newResp);
-                    })
-                })
-            }else if(urlsCacheInmutable.find(url => url === e.request.url)){
-                console.log(`Encontre una url inmutable ${e.request.url}`)
-                caches.open(INMUTABLE_CACHE_NAME).then(cache => {
-                    fetch(e.request).then(newResp => {
-                        cache.put(e.request, newResp);
-                    })
-                })
-            }
+            // if(urlsCacheStatic.find(url => url === e.request.url)){
+            //     console.log(`Encontre una url estática ${e.request.url}`)
+            //     caches.open(STATIC_CACHE_NAME).then(cache => {
+            //         fetch(e.request).then(newResp => {
+            //             cache.put(e.request, newResp);
+            //         })
+            //     })
+            // }else if(urlsCacheInmutable.find(url => url === e.request.url)){
+            //     console.log(`Encontre una url inmutable ${e.request.url}`)
+            //     caches.open(INMUTABLE_CACHE_NAME).then(cache => {
+            //         fetch(e.request).then(newResp => {
+            //             cache.put(e.request, newResp);
+            //         })
+            //     })
+            // }
             return res;
         }
 
