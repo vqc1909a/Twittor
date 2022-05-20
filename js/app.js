@@ -4,10 +4,10 @@
 //!Cargar el sw
 if (navigator.serviceWorker){
     // if (url.includes("localhost") | url.includes("127.0.0.1")){
-    //     swLocation = "/sw.js";
+    //     swLocation = "./sw.js";
     // }
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker.register('./sw.js')
         .then(function(reg){
             console.log("service worker registered");
         }).catch(function(err) {
