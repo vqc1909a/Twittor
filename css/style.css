@@ -11,7 +11,30 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
-}
+
+    /* En android, al momento de jalar la pantalla hacia abajo, no me aparezca el icono de recarga, xq eso mata la experiencia del usuario */
+    overscroll-behavior-y: contain;
+
+    /* Al igual que la mayoría de las aplicaciones nativas de iOS no permiten la selección de texto,
+      puede desactivar esta función en su PWA. Para hacer esto,
+      configure el CSS -webkit-user-select */
+    user-select: none;
+    -webkit-user-select: none;
+
+
+    /* Al tocar un enlace en el navegador web de iOS,l
+      aparece un cuadro gris alrededor del elemento. */
+    /* Aunque no existe una forma sencilla de desactivar este efecto,
+      puede cambiar el color de resaltado a transparente y,
+      por lo tanto,
+      hacerlo desaparecer. */
+    -webkit-tap-highlight-color: transparent;
+
+    /* Si toca y mantiene presionado un elemento en el navegador de iOS,
+      se abrirá un menú de llamada (como el de arriba). Para deshabilitar este efecto en iOS,
+      configure el */
+    -webkit-touch-callout: none
+  }
 
 /* Personalizados */
 .oculto {

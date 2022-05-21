@@ -13,6 +13,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Android -->
     <meta name="theme-color" content="#3367D6">
+    
+    <!-- IOS Display: Para dispositivos IOS menores a 11.4 xq no te lee el manifest y no me aparecera en pantalla completa si es que pongo la opción de standalone en display -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- IOS Status Bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <title>Twittor</title>
     <link rel="manifest" href="manifest.json">
@@ -21,6 +27,24 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+
+    <!-- IOS Icons -->
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+
+    <!-- IOS images: En tus proyectos posteriores tendrían que agregar todas las resoluciones posible de un iphone y de un ipad -->
+    <!-- iPhone X, Xs (1125px x 2436px) --> 
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) --> 
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> 
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-750x1334.png">
+
+    <!-- IOS Short Name, si no esta este atributo, usará el title -->
+    <meta name="apple-mobile-web-app-title" content="Twittor!">
+
     <script src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script>
 </head>
 <body>
