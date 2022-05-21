@@ -5,10 +5,10 @@
 //!Esto del importScript, es una mierda xq no me capta el error cuando esta dentro de un catch, pero si funciona
 importScripts("js/sw-utils.js");
 
-//!NOTA IMPORTANTE: Cuando estás en modo developer o sea con tu localhost o 127.0.0.1:8081 siempre tienes que marcar disable cache xq sino no te funcionara nada y eso pasa xq una vez cargado tu contenido de tu localhost se guarda en tu cache del navegador y cuando haces cambios de tus archivos no te actulziara nada xq el navegador dirá que ya he pedido esta webada asi que no lo volvere a pedir, pra eso marcar el disable cache. Ahora cuando esta en modo producción ocurre algo diferente, cuando te carga tus archivos por primera vez de igual forma te almacena en cache del navegador, luego cuando tu haces algun cambio en local y subes a producción, y vuelves a ingresaar en producción a la url, el navegador detecta cambios de archivos en ese dominio y limpia la cache automaticamente, así que eso es la magia de chrome, y no olvides debes cambiar algun caracter chrome o la versión de las caches o algun comentario que hiciste (mejor) para que detecte algun cambio del sw
-const STATIC_CACHE_NAME = "static-v2";
-const DYNAMIC_CACHE_NAME = "dynamic-v2";
-const INMUTABLE_CACHE_NAME = "inmutable-v2";
+//!NOTA IMPORTANTE: Cuando estás en modo developer o sea con tu localhost o 127.0.0.1:8081 siempre tienes que marcar disable cache xq sino no te funcionara nada y eso pasa xq una vez cargado tu contenido de tu localhost se guarda en tu cache del navegador y cuando haces cambios de tus archivos no te actulziara nada xq el navegador dirá que ya he pedido esta webada asi que no lo volvere a pedir, pra eso marcar el disable cache. Ahora cuando esta en modo producción ocurre algo diferente, cuando te carga tus archivos por primera vez de igual forma te almacena en cache del navegador, luego cuando tu haces algun cambio en local y subes a producción, y vuelves a ingresaar en producción a la url, el navegador detecta cambios de archivos en ese dominio y limpia la cache automaticamente, así que eso es la magia de chrome, y no olvides debes cambiar algun caracter chrome o la versión de las caches (mucho mejor, cambisr todaas las versiones) o algun comentario que hiciste  para que detecte algun cambio del sw.
+const STATIC_CACHE_NAME = "static-v1";
+const DYNAMIC_CACHE_NAME = "dynamic-v1";
+const INMUTABLE_CACHE_NAME = "inmutable-v1";
 
 const APP_SHELL = [
     "/",
@@ -21,7 +21,8 @@ const APP_SHELL = [
     "img/avatars/thor.jpg",
     "img/avatars/wolverine.jpg",
     "js/app.js",
-    "js/sw-utils.js"
+    "js/sw-utils.js",
+    "manifest.json"
 ];
 
 const APP_SHELL_INMUTABLE = [
