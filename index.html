@@ -21,14 +21,12 @@
     <!-- IOS Status Bar -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <!-- IOS Short Name, si no esta este atributo, usará el title -->
+    <meta name="apple-mobile-web-app-title" content="Twittor!">
+
     <title>Twittor</title>
     <link rel="manifest" href="manifest.json">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
-
     <!-- IOS Icons -->
     <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
@@ -43,10 +41,25 @@
     <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> 
     <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-750x1334.png">
 
-    <!-- IOS Short Name, si no esta este atributo, usará el title -->
-    <meta name="apple-mobile-web-app-title" content="Twittor!">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
 
-    <script src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script>
+    <!-- No poner esto aquí, es una cagada para el rendimiento de la página, xq te va a leer todo esto y recién pasa a leer el html de abajo -->
+    <!-- <script src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script> -->
+
+    <!-- El atributo async booleano en los elementos del script permite que el archivo JavaScript externo se ejecute cuando esté disponible, sin demorar la carga de la página primero. -->
+
+    <!-- El atributo defer booleano en los elementos del script permite que el archivo JavaScript externo se ejecute cuando se carga el DOM, sin retrasar la carga de la página primero. -->
+
+    <!-- si especifica ambos, async tiene prioridad en los navegadores modernos, mientras que los navegadores más antiguos que son compatibles defer pero no async lo harán como respaldo defer. -->
+
+    <!-- <script async src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script> -->
+
+    <!-- Lo mejor que puede hacer para acelerar la carga de su página cuando usa scripts es ponerlos en el heady agregar un deferatributo a su scriptetiqueta: -->
+    <script defer src="script.js"></script>
 </head>
 <body>
         <!-- Titulo -->
@@ -145,10 +158,9 @@
 
         <button type="button" id="install-btn" class="button">Instalar</button>
 
-      
-    
+        <!-- Esto es lo mejor que puede hacer si necesita admitir navegadores más antiguos que no admiten dos características relativamente recientes de HTML: async y defer -->
+        <!-- <script src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script> -->
         <script src="js/libs/jquery.js"></script>
         <script src="js/app.js"></script>
-    
 </body>
 </html>
