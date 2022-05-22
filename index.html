@@ -44,8 +44,10 @@
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
 
+    <link rel="preload" href="css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/animate.css"></noscript>
+    
     <!-- No poner esto aquí, es una cagada para el rendimiento de la página, xq te va a leer todo esto y recién pasa a leer el html de abajo -->
     <!-- <script src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script> -->
 
@@ -56,7 +58,7 @@
     <!-- si especifica ambos, async tiene prioridad en los navegadores modernos, mientras que los navegadores más antiguos que son compatibles defer pero no async lo harán como respaldo defer. -->
 
     <script async src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script>
-    <!-- <script defer src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script> -->
+    <script defer src="https://kit.fontawesome.com/c3e2e9d902.js"c crossorigin="anonymous"></script>
 
     <!-- Lo mejor que puede hacer para acelerar la carga de su página cuando usa scripts es ponerlos en el heady agregar un deferatributo a su scriptetiqueta: -->
     <!-- <script defer src="script.js"></script> -->
